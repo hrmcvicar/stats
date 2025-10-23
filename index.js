@@ -3,7 +3,7 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
@@ -11,7 +11,11 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
 
 /**
@@ -20,7 +24,14 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  return total / numbers.getMean;
 }
+
+function getMean(numbers) {
+  return getSum(numbers) / getLength(numbers);
 
 /**
  * @param {number[]} numbers an array of integers
@@ -28,6 +39,18 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let min = numbers[0]
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+  }
+  return min;
+}
+
+function getMin(numbers) {
+  // TODO
+  return Math.min(...numbers);
 }
 
 /**
@@ -36,6 +59,16 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  return Math.max(...numbers);
+}
+function getMax (numbers) {
+let max = numbers[0]
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
 
 /**
@@ -44,7 +77,9 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+return Math.max(...numbers) - Math.min(...numbers)
 }
+
 
 /**
  * @param {number[]} numbers an array of integers
@@ -52,6 +87,7 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+return numbers.filter(num=>num%2 === 0)
 }
 
 /**
@@ -60,6 +96,7 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  return numbers.filter(num=>num%2!==0)
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
